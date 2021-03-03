@@ -110,7 +110,7 @@ To check influence of BMC, instead of reimplementing the network of origin paper
 
 ### Note
 - Adjusting training parameters carefully, longer training time might further boost accuracy.
-- As BMC is a weakly supervised method, it may only make predictions more physically plausible,but cannot boost AUC performance strongly when using strong supervision.
+- **As BMC is a weakly supervised method, it may only make predictions more physically plausible,but cannot boost AUC performance strongly when strong supervision is used.**
 
 ## Limitation
 - Due to time limitation, I didn't reimplement the network and experiments of original paper.
