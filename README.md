@@ -93,12 +93,8 @@ python weakloss.py
 ## Experiment results 
 To check influence of BMC, instead of reimplementing the network of origin paper, I integrate BMC into my own [project](https://github.com/MengHao666/Minimal-Hand-pytorch),
   
-### Detnet training and evaluation curve
-Run the following code to see my results
-```
-python plot.py --path my_results/out_loss_auc
-```
 
+### Train and evaluation curve
 (AUC means 3D PCK, and ACC_HM means 2D PCK)
 ![teaser](assets/train_eval_curve.png)
 
@@ -114,7 +110,7 @@ python plot.py --path my_results/out_loss_auc
 
 ### Note
 - Adjusting training parameters carefully, longer training time might further boost accuracy.
-- As BMC is a weakly supervised method, it may only make predictions physically plausible,but cannot boost AUC performance strongly when using strong supervision.
+- As BMC is a weakly supervised method, it may only make predictions more physically plausible,but cannot boost AUC performance strongly when using strong supervision.
 
 ## Limitation
 - Due to time limitation, I didn't reimplement the network and experiments of original paper.
