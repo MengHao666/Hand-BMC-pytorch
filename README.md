@@ -105,7 +105,7 @@ To check influence of BMC, instead of reimplementing the network of origin paper
 |  **RHD**  |        0.9339     |   0.9364    |       
 |  **STB**  |        0.8744     |   0.8778    |       
 |  **DO**   |        0.9378     |   0.9475    |         
-|  **EO**   |        0.9270     |   0.9812    |        
+|  **EO**   |        0.9270     |   0.9182    |        
 
 
 ### Note
