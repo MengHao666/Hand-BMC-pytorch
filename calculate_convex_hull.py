@@ -40,16 +40,18 @@ def calculate_convex_hull(joint_angles, args):
         ja = joint_angles[:, ID]
         ja_list = [tuple(x) for x in ja.tolist()]
 
+        # original convex hull
         convex = hull.convex(ja_list)
         convex = np.array(convex)
         print("ori_hull.shape=", convex.shape)
 
         convex_list = convex.tolist()
-
+        # convex hull simplified by the Ramer-Douglas-Peucker algorithm, a polygon simplification algorithm
         rdp_convex = rdp(convex_list, epsilon=args.epsilon)
         rdp_convex = np.array(rdp_convex)
         print("rdp_hull.shape=", rdp_convex.shape)
 
+        # convex hull further simplified by a greedy algorithm
         dep_hull = rdp_convex.copy()
         for i in range(rdp_convex.shape[0]):
             tmp_index = np.argwhere(dep_hull == rdp_convex[i])[0][0]

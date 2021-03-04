@@ -4,8 +4,8 @@
 
 
 This project reimplement following components :
-1. 3 kinds of biomechanical soft constraints (BMC)
-1. integrate BMC into training procedure  
+1. 3 kinds of biomechanical soft constraints
+1. integrate BMC into training procedure  (PyTorch version)
 
 
 ## Usage
@@ -73,7 +73,12 @@ And you will also see every convex hull like following figure:
 
 ![BMC](assets/0_convex_hull.png)
 
-("Bone PIP" means the bone from MCP joint to PIP joint in thumb)
+- **"Bone PIP"** means the bone from MCP joint to PIP joint in thumb
+- **flexion** and **abduction** is two kinds of angle describing joint rotation
+- **"ori_convex_hull"** means the original convex hull calculated from all joint angle points
+- **"rdp_convex_hull"** means convex hull simplified by the Ramer-Douglas-Peucker algorithm, a polygon simplification algorithm
+- **"del_convex_hull"** means convex hull further simplified by a greedy algorithm
+- **"rectangle"** means the minimal rectangle to surround all joint angle points
 
 ### Run the  code
 ```
