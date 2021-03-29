@@ -299,7 +299,7 @@ class BMCLoss:
         if self.lambda_a:
             # PIP bones
             PIP_X_axis = torch.zeros([batch_size, 5, 3]).cuda()  # (B,5,3)
-            PIP_X_axis[:, [0, 1, 4], :] = -normals[:, [0, 1, 3]]
+            PIP_X_axis[:, [0, 1, 4], :] = -normals[:, [0, 1, 4]]
             PIP_X_axis[:, 2:4] = -normalize(normals[:, 2:4] + normals[:, 1:3])  # (B,2,3)
             PIP_Y_axis = normalize(cross_product(PIP_Z_axis, PIP_X_axis))  # (B,5,3)
 
